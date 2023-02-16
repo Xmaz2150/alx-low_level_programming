@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILE -o ${CFILE%.c}.o;
+gcc -E  $CFILE > CFILE | gcc -S CFILE > CFILE.o;

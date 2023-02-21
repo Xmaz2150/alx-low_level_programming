@@ -1,8 +1,12 @@
 #include "main.h"
-
+/**
+ * prints alphabets
+ *
+ * a-z x10
+ */
 void print_alphabet_x10(void)
 {
-	int i,j;
+	int i, j;
 
 	j = 0;
 	while (j < 10)

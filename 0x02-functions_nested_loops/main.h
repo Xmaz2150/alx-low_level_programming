@@ -1,25 +1,13 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include <unistd.h>
 
-int _putchar(void)
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
 {
-	int line[7];
-        int i;
-
-        line[0] = 95;
-        line[1] = 112;
-        line[2] = 117;
-        line[3] = 116;
-        line[4] = 99;
-        line[5] = 104;
-        line[6] = 97;
-        line[7] = 114;
-
-        for (i = 0 ;i <= 7 ;i++)
-        {
-                putchar(line[i]);
-        }
-        putchar(10);
-        return (0);
+	return (write(1, &c, 1));
 }
-#endif

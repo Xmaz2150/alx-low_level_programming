@@ -19,5 +19,5 @@ if (i != n - 1)
 printf(", ");
 }
 }
-_putchar('\n');	
+putchar('\n');	
 }

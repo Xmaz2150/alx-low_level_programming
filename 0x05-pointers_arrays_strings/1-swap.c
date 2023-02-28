@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * swap_int - swaps to no's
- *
+ * swap_int - swaps to no's:
+ * @a with @b
  */
 void swap_int(int *a, int *b)
 {

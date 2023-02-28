@@ -3,7 +3,7 @@
  * mul - multiplies two no's:
  *
  * @a: Input and:
- * @n: Input
+ * @b: Input
  * Return: int
  */
 int mul(int a, int b)

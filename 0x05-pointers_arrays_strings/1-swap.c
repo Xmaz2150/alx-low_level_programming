@@ -1,5 +1,8 @@
 #include "main.h"
-
+/**
+ * swap_int - swaps to no's
+ *
+ */
 void swap_int(int *a, int *b)
 {
 	int tmp;

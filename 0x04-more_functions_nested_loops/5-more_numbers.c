@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * more_numbers - prints 0 - 14x10
  *
@@ -6,19 +7,16 @@
  */
 void more_numbers(void)
 {
-	int i;
+	int i, j;
 
-	i = 0;
-
-	while (i <= 10)
+	int no[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14};
+		
+	for (j = 0; j < 10; j++)
 	{
-		int j;
-
-		for (j = 0; j <= 14; j++)
+		for (i = 0; i < 15; i++)
 		{
-			_putchar(j + '0');
+			printf("%d",no[i]);
 		}
-		_putchar('\n');
-		i++;
+		printf("\n");
 	}
 }

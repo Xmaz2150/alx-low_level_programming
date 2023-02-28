@@ -6,7 +6,7 @@
  * Return: none
  */
 void print_rev(char *s)
-{
+{	
 	int len, i, j;
 
 	len = 0;
@@ -26,4 +26,4 @@ void print_rev(char *s)
 	{
 		_putchar(s[len - j]);
 	}
-_putchar('\n'); }	
+	_putchar('\n'); }	

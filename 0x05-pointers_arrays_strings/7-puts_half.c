@@ -6,9 +6,9 @@
  * Return: none
  */
 void puts_half(char *str)
-{	
-	int len,i,j;
-	
+{
+	int len, i, j;
+
 	len = 0;
 	for (i = 0; ; i++)
 	{

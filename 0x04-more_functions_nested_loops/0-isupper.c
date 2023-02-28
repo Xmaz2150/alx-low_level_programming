@@ -1,3 +1,10 @@
+#include "main.h"
+/**
+ * _isupper - is upper
+ *
+ * @c: Input
+ * Return: none
+ */
 int _isupper(int c)
 {
         if (c >= 65 && c <= 90)

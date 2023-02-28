@@ -1,5 +1,10 @@
- #include "main.h"
-
+#include "main.h"
+/**
+ * _isdigit - is digit?
+ *
+ * @c: Input
+ * Return: int
+ */
 int _isdigit(int c)
 {
 	if (c >= 48 && c <= 57)

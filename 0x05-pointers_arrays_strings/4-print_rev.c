@@ -22,7 +22,6 @@ void print_rev(char *s)
 			break;
 		}
 	}
-
 	for (j = 1; j < len + 1; j++)
 	{
 		_putchar(s[len - j]);

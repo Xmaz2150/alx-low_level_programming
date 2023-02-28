@@ -5,8 +5,7 @@
  * @s: Input
  * Return: none
  */
-void print_rev(char *s)
-{	
+void print_rev(char *s){	
 	int len, i, j;
 
 	len = 0;
@@ -25,5 +24,4 @@ void print_rev(char *s)
 	for (j = 1; j < len + 1; j++)
 	{
 		_putchar(s[len - j]);
-	}
-	_putchar('\n'); }	
+	}_putchar('\n'); }	

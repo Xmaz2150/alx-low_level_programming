@@ -15,7 +15,7 @@ void more_numbers(void)
 	{
 		for (i = 0; i < 15; i++)
 		{
-			printf("%d" ,no[i]);
+			printf("%d", no[i]);
 		}
 		printf("\n");
 	}

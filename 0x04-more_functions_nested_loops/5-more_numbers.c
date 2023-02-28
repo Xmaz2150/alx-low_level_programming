@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * more_numbers - prints 0 - 14x10
+ *
+ * Return: none
+ */
 void more_numbers(void)
 {
 	int i;

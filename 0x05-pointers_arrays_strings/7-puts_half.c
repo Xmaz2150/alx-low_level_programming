@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * puts_half - prints half of str
+ *
+ * @str: Input
+ * Return: none
+ */
 void puts_half(char *str)
 {
 	int len, i, j;

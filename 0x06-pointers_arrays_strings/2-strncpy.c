@@ -6,9 +6,9 @@
  * @src : Input by:
  * @n : Input char(s)
  *
- * Returns: char
+ * Return: char
  */
- char *_strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i, j, len;
 

@@ -9,32 +9,52 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
+	unsigned int len_s;
+	unsigned int len_a;
 	unsigned int len;
+	unsigned int i;
+	unsigned int j;
+	unsigned int si;
+	unsigned int ai;
 
-	while (*s && *_strchr(accept, *s++))
-		len++;
-	return (len);
-}
-
-char *_strchr(char *s, char c)
-{
-	int i;
-	char *f;
-
+	len = 0;
 	for (i = 0; ; i++)
 	{
 		if (s[i] != '\0')
 		{
-			if (s[i] == c)
-			{
-				f = &s[i];
-				break;
-			}
+			len_s++;
 		}
 		else
 		{
 			break;
 		}
 	}
-	return (f);
+	for (j = 0; ; j++)
+        {
+                if (accept[j] != '\0')
+                {
+                        len_a++;
+                }
+                else
+                {
+                        break;
+                }
+
+	}
+
+	for (si = 0; i < len_s; si++)
+	{
+		unsigned int match = 0;
+		for (ai = 0; ai < len_a; ai++)
+		{
+			if (accept[ai] == s[si])
+			{
+				len++;
+				match = 1;
+			}
+		}
+		if (match == 0)
+			return (len);
+	}
+	return (len);
 }

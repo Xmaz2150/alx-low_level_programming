@@ -30,21 +30,21 @@ unsigned int _strspn(char *s, char *accept)
 		}
 	}
 	for (j = 0; ; j++)
-        {
-                if (accept[j] != '\0')
-                {
-                        len_a++;
-                }
-                else
-                {
-                        break;
-                }
-
+	{
+		if (accept[j] != '\0')
+		{
+			len_a++;
+		}
+		else
+		{
+			break;
+		}
 	}
 
 	for (si = 0; i < len_s; si++)
 	{
 		unsigned int match = 0;
+
 		for (ai = 0; ai < len_a; ai++)
 		{
 			if (accept[ai] == s[si])

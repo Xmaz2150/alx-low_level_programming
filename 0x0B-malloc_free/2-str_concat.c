@@ -4,14 +4,14 @@
 
 /**
  * *str_concat - returns pointer to new string containing :
- * @s1: Input and 
+ * @s1: Input and
  * @s2: Input
  *
  * Return: char
  */
 char *str_concat(char *s1, char *s2)
-{	
-	int i,j,s1_len,s2_len;
+{
+	int i, j, s1_len, s2_len;
 	char *new_str;
 
 	if (s1 == NULL)
@@ -19,9 +19,9 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	}
 	if (s2 == NULL)
-        {
-                s2 = "";
-        }
+	{
+		s2 = "";
+	}
 	else
 	{
 		i = 0;
@@ -30,16 +30,21 @@ char *str_concat(char *s1, char *s2)
 		s2_len = strlen(s2);
 
 		new_str = malloc(s1_len + s2_len + 1);
-		
-		for ( ; i < s1_len; i++)
+
+		if (new_str == NULL)
 		{
-			new_str[i] = s1[i];
+			return (NULL);
 		}
-		for ( ; j < s2_len; j++)
+		else
 		{
-			new_str[i + j] = s2[j];
+			for ( ; i < s1_len; i++)
+				new_str[i] = s1[i];
+
+			for ( ; j < s2_len; j++)
+				new_str[i + j] = s2[j];
+
+			new_str[i + j] = '\0';
 		}
-		new_str[i + j] = '\0';
 	}
 
 	return (new_str);

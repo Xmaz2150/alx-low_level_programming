@@ -8,7 +8,7 @@
  * Return: char(pointer)
  */
 char *_strdup(char *str)
-{	
+{
 	int i;
 	char *new_str;
 
@@ -19,14 +19,21 @@ char *_strdup(char *str)
 	else
 	{
 		new_str = malloc(sizeof(str));
-		
-		i = 0;
 
-		while (str[i] != '\0')
+		if (new_str == NULL)
 		{
-			new_str[i] = str[i];
-			i++;
+			return (NULL);
 		}
-		return (new_str);	
+		else
+		{
+			i = 0;
+
+			while (str[i] != '\0')
+			{
+				new_str[i] = str[i];
+				i++;
+			}
+		}
 	}
+	return (new_str);
 }

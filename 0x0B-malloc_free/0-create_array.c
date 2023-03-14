@@ -14,19 +14,25 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 	{
-		return (0);
+		return (NULL);
 	}
 	else
 	{
 
 		a = malloc(sizeof(c) * size);
-
-		i = 0;
-
-		for (i = 0; i < size; i++)
+		if (a == NULL)
 		{
-			a[i] = c;
+			return (NULL);
 		}
-		return (a);
+		else
+		{
+			i = 0;
+
+			for (i = 0; i < size; i++)
+			{
+				a[i] = c;
+			}
+			return (a);
+		}
 	}
 }

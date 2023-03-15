@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * *_strdup- returns pointer to new string, dublicate of:
  * @str: Input
@@ -18,7 +18,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		new_str = malloc(sizeof(str));
+		new_str = malloc(sizeof(char) * strlen(str) + 1);
 
 		if (new_str == NULL)
 		{

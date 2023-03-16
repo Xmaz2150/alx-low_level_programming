@@ -7,7 +7,7 @@
  *
  * Return: none
  */
- void *malloc_checked(unsigned int b)
+void *malloc_checked(unsigned int b)
 {
 	char *a;
 
@@ -15,7 +15,7 @@
 
 	if (a == NULL)
 	{
-		exit (98);
+		exit(98);
 	}
 	else
 	{

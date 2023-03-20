@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	char filename[256];
+	char my_name[256];
 	int size;
 
-	size = sizeof(filename);
+	size = sizeof(my_name);
 
-	_strncpy(filename, __FILE__, size);
-	_puts(filename);
+	_strncpy(my_name, __FILE__, size);
+	_puts(my_name);
 
 	return (0);
 }

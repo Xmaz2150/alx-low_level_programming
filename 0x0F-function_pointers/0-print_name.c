@@ -6,7 +6,6 @@
  * @name: Input, with callback funtion:
  * @f: Input, Function
  */
-
 void print_name(char *name, void (*f)(char *))
 {
 	if (f == NULL)

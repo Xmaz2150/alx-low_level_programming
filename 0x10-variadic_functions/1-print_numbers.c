@@ -3,8 +3,8 @@
 /**
  * print_numbers - prints args:
  *
- * @n: Input, seperated by:
- * @separator: Input, charecter
+ * @n: Input, number of arguments:
+ * @separator: Input, charecter to separate args
  *
  * Return: none
  */

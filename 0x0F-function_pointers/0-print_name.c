@@ -5,7 +5,6 @@
  *
  * @name: Input, with callback funtion:
  * @f: Input, Function
- * Return: none
  */
 
 void print_name(char *name, void (*f)(char *))

@@ -4,7 +4,7 @@
  * print_name - prints:
  *
  * @name: Input, with callback funtion:
- * @f: Function
+ * @f: Input, Function
  * Return: none
  */
 

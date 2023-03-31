@@ -28,7 +28,6 @@ int main(void)
     head = new;
     n = list_len(head);
     printf("-> %lu elements\n", n);
-    free(new->str);
     free(new);
     return (0);
 }

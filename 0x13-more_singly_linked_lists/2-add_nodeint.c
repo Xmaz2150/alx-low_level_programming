@@ -1,10 +1,9 @@
-#include <stddef.h>
 #include  "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 /**
  * add_nodeint- adds node in lls starting at:
- * @h: Input, head
+ * @head: Input, head, new data:
+ * @n: Input.
  * Return: pointer to new head
  */
 
@@ -19,7 +18,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	{
 		return (NULL);
 	}
-	
+
 	new_node->n = n;
 	new_node = *head;
 	*head = new_node;

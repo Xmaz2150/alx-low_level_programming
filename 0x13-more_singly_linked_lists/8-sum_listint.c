@@ -1,11 +1,12 @@
 #include "lists.h"
 
-/** sum_listint - returns some ints in node:
-  *
-  * @head: Input, head
-  *
-  * Return: int
-  */
+/**
+ * sum_listint - returns total of data in a lls:
+ *
+ * @head: Input.
+ *
+ * Return: int
+ */
 
 int sum_listint(listint_t *head)
 {
@@ -13,7 +14,7 @@ int sum_listint(listint_t *head)
 
 	sum = 0;
 	while (head != NULL)
-	{	
+	{
 		sum += head->n;
 		head = head->next;
 	}

@@ -1,8 +1,8 @@
 #include <string.h>
 #include <unistd.h>
 
-/*
- * main - Etry point
+/**
+ * main - Entry point
  *
  * Return: Alwasy 1 (Success)
  */

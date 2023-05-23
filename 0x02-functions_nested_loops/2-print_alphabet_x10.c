@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * prints alphabets
+ * print_alphabet_x10 - prints a-z x10
  *
  * a-z x10
  */

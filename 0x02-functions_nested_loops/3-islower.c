@@ -2,7 +2,7 @@
 /**
  * _islower - checks if alphabet is lowercase or not:
  * @c : char
- * Return : 0 (true) | 1 (false)
+ * Return : 0 (true) or 1 (false)
  */
 int _islower(int c)
 {

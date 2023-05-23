@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * print_last_digit - returns and prints last digit of
- * @n: Input
+ * jack_bauer - prints every minute of the day
  *
- * Return: las digit
+ * Return: none
  */
 void jack_bauer(void)
 {

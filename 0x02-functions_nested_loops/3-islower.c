@@ -1,5 +1,9 @@
 #include"main.h"
-
+/**
+ * _islower - checks if alphabet is lowercase or not
+ *
+ * Return : 0 (true) | 1 (false)
+ */
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)

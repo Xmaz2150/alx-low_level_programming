@@ -14,18 +14,18 @@ void jack_bauer(void)
 		for (j = 0; j <= 59; j++)
 		{
 			if (i <= 9)
-				_putchar('0');
+				putchar('0');
 			printf("%d", i);
 			
-			_putchar(':');
+			putchar(':');
 			
 			if (j <= 9)
-				_putchar('0');
+				putchar('0');
 			printf("%d", j);
 			
 			if (j != 59)
-				_putchar('\n');
+				putchar('\n');
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
 }

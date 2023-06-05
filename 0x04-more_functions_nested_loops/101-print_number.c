@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - prints the latter:
+ * print_number - prints the latter:
  * @n: Input, using putchar
  *
  * Return: void
@@ -15,9 +15,9 @@ void print_number(int n)
 
 	sprintf(num, "%d", n);
 
-	for( i = 0; num[i] != '\0'; i++)
+	for (i = 0; num[i] != '\0'; i++)
 	{
-		if( num[i] >= '0' && num[i] <= '9')
+		if (num[i] >= '0' && num[i] <= '9')
 			_putchar(num[i]);
 		else
 			_putchar(num[i]);

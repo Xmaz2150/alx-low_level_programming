@@ -18,18 +18,15 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] != '\0')
 		{
-			if (s[i] != '\0')
+			if (s[i] == c)
 			{
-				if (s[i] == c)
-				{
-					f = &s[i];
-					break;
-				}
+				f = &s[i];
+				break;
 			}
-			else
-			{
-				return (NULL);
-			}
+		}
+		else
+		{
+			return (NULL);
 		}
 	}
 

@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 	int i;
 	char *f;
 
-	if (c == '\0')
+	if (c >= '!' && c <= '~')
 		return (NULL);
 	else
 	{

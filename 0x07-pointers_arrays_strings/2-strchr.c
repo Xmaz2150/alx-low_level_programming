@@ -14,9 +14,9 @@ char *_strchr(char *s, char c)
 	int i;
 	char *f;
 
-	if (c != '\0')
+	for (i = 0; c != '\0'; i++)
 	{
-		for (i = 0; ; i++)
+		if (s[i] != '\0')
 		{
 			if (s[i] != '\0')
 			{
@@ -31,8 +31,7 @@ char *_strchr(char *s, char c)
 				return (NULL);
 			}
 		}
-	
-	return (f);
 	}
-	return (NULL);
+
+	return (f);
 }

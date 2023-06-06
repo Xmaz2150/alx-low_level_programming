@@ -16,7 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 	len_s = strlen(s);
 	len_a = strlen(accept);
 	
-	for (si = 0; i < len_s; si++)
+	for (si = 0; si < len_s; si++)
 	{
 		unsigned int match = 0;
 		for (ai = 0; ai < len_a; ai++)

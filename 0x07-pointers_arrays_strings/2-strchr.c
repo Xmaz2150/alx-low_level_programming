@@ -14,24 +14,26 @@ char *_strchr(char *s, char c)
 	int i;
 	char *f;
 
-	if (c == '0')
+	if (c == '\0')
 		return (NULL);
-
-	for (i = 0; ; i++)
+	else
 	{
-		if (s[i] != '\0')
+		for (i = 0; ; i++)
 		{
-			if (s[i] == c)
+			if (s[i] != '\0')
 			{
-				f = &s[i];
-				break;
+				if (s[i] == c)
+				{
+					f = &s[i];
+					break;
+				}
+			}
+			else
+			{
+				return (NULL);
 			}
 		}
-		else
-		{
-			return (NULL);
-		}
-	}
 
-	return (f);
+		return (f);
+	}
 }

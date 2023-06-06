@@ -24,7 +24,7 @@ char *_strchr(char *s, char c)
 		}
 		else
 		{
-			break;
+			return (NULL);
 		}
 	}
 	return (f);

@@ -9,13 +9,7 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int len_s;
-	unsigned int len_a;
-	unsigned int len;
-	unsigned int i;
-	unsigned int j;
-	unsigned int si;
-	unsigned int ai;
+	unsigned int len_s, len_a, len, i, j, si, ai;
 
 	len = 0;
 	for (i = 0; ; i++)
@@ -41,7 +35,6 @@ unsigned int _strspn(char *s, char *accept)
                 }
 
 	}
-
 	for (si = 0; i < len_s; si++)
 	{
 		unsigned int match = 0;

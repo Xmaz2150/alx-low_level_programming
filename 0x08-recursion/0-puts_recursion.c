@@ -10,7 +10,6 @@ void _puts_recursion(char *s)
 char *ptr;
 
 	ptr = s;
-	printf("%c", *s);
 	if (*s == '\0')
 	{
 		printf("\n");
@@ -18,6 +17,7 @@ char *ptr;
 	}
 	else
 	{
+		printf("%c", *s);
 		_puts_recursion(ptr + 1);
 	}
 }

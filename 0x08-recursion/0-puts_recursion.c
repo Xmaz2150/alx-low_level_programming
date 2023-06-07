@@ -7,17 +7,17 @@
  */
 void _puts_recursion(char *s)
 {
+char *ptr;
+
+	ptr = s;
+	printf("%c", *s);
 	if (*s == '\0')
 	{
-		_putchar('\n');
+		printf("\n");
 		return;
 	}
 	else
 	{
-		/**
-		 *_putchar('%c', *s);
-		 */
-		printf("%c", *s);
-		_puts_recursion(s + 1);
+		_puts_recursion(ptr + 1);
 	}
 }

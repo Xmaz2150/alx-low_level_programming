@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * main - multiplies two nums
+ * @argc: argument count
+ * @argv: arguments
+ *
+ * Return: (0) Always success
+ */
+
 int main(int argc, char *argv[])
 {
 

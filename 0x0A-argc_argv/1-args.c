@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * main - prints no of args
+ * @argc: argument count
+ * @argv: arguments
+ *
+ * Return: (0) Always success
+ */
 
 int main(int argc, char *argv[])
 {

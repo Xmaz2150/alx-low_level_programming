@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int change(int cents);
 /**
 * main - prints min no of coins
 * @argc: 2 arguments

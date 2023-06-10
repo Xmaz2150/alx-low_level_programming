@@ -39,6 +39,8 @@ return(0);
 */
 int change(int cents)
 {
+int coins;
+coins = 0;
 while (cents >= 25)
 {
 cents -= 25;

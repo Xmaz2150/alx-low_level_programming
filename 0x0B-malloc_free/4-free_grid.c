@@ -4,6 +4,7 @@
 /**
  * free_grid - frees 2D array:
  * @grid: Input, previously created by alloc_grid
+ * @height: length of grid
  *
  * Return: none;
  */
@@ -24,5 +25,6 @@ void free_grid(int **grid, int height)
 		{
 			free(grid[i]);
 		}
+		free(grid);
 	}
 }

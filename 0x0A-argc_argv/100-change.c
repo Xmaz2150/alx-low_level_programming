@@ -38,7 +38,7 @@ cents = atoi(argv[1]);
 coins = change(cents);
 
 printf("%d\n", coins);
-return(0);
+return (0);
 }
 
 /**

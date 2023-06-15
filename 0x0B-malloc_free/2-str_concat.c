@@ -17,12 +17,10 @@ char *str_concat(char *s1, char *s2)
 	
 	if ((s1 == NULL) && (s2 == NULL))
 	{
-		printf("All null\n");
 		new_str = malloc(1);
 
 		if(new_str == NULL)
 			return (NULL);
-
 		*new_str = '\0';
 		return (new_str);
 	}

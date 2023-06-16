@@ -1,21 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-
-/**
-unsigned int my_strcpy(unsigned int i, unsigned int s_len, char *dest, char *s)
-{
-	unsigned int counter;
-
-	counter = 0;
-	while (counter < s_len)
-	{
-		dest[counter + i] = s[counter];
-		counter++;
-	}
-	return (i + counter);
-}
-*/
+#include <stdio.h>
+char *is_valid(char *s);
 /**
  * string_nconcat -returns new string with combined str's:
  *
@@ -25,26 +12,17 @@ unsigned int my_strcpy(unsigned int i, unsigned int s_len, char *dest, char *s)
  *
  * Return: char
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int s1_len, s2_len, i, j;
 	char *new_str;
 
+	s1 = is_valid(s1);
 	if (s1 == NULL)
-	{
-		s1 = malloc(1);
-		if (s1 == NULL)
-			return(NULL);
-		*s1 = '\0';
-	}
+		return (NULL);
+	s2 = is_valid(s2);
 	if (s2 == NULL)
-	{
-		s2 = malloc(1);
-		if (s2 == NULL)
-			return (NULL);
-		*s2 = '\0';
-	}
+		return (NULL);
 
 	s1_len = strlen(s1);
 	s2_len = strlen(s2);
@@ -79,5 +57,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 	}
 	new_str[i + j] = '\0';
+	if (s1[1] == 'i')
+		free(s1);
+	if (s2[1] == 'i')
+		free(s2);
 	return (new_str);
+}
+
+/**
+ * is_valid - checks if str is NULL
+ * @s: Input
+ *
+ * Return: char*
+ */
+
+char *is_valid(char *s)
+{
+	if (s == NULL)
+	{
+		s = malloc(3);
+		if (s == NULL)
+			return (NULL);
+		*s = '\0';
+		*(s + 1) = 'i';
+		*(s + 2) = '\0';
+	}
+	return (s);
 }

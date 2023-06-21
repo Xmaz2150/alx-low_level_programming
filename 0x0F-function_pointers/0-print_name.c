@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 /**
  * print_name - prints name:
  * @name: Input, with function at:
@@ -9,5 +10,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if ((name != NULL) || (f != NULL))
+		f(name);
+	return (NULL);
 }

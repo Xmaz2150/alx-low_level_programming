@@ -3,4 +3,4 @@
 
 void print_name(char *name, void (*f)(char *));
 
-#endif /*FUNCT_PTRS*
+#endif /*FUNCT_PTRS*/

@@ -10,9 +10,8 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	size_t i, j;
+	size_t i;
 	char *str;
-	char *c = "cifs";
 
 	va_start(ap, format);
 	i = 0;
@@ -38,13 +37,9 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 				break;
 		}
-		j = 0;
-		while (j < 4)
-		{
-			if (i < (strlen(format) - 1) && (format[i] == c[j]))
-				printf(", ");
-			j++;
-		}
+
+		if (i < (strlen(format) - 1) && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
+			printf(", ");
 		i++;
 	}
 	va_end(ap);

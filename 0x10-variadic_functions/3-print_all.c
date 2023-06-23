@@ -13,6 +13,8 @@ void print_all(const char * const format, ...)
 	size_t i;
 	char *str;
 
+	if (format == NULL)
+		return;
 	va_start(ap, format);
 	i = 0;
 	while (format[i] != '\0')

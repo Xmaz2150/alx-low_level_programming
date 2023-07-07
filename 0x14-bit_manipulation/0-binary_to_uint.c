@@ -1,9 +1,20 @@
 #include "main.h"
 
+/**
+ * binary_to_uint - converts bin to dec
+ * @b: Input, bin as str
+ *
+ * Return: (u int)num in dec
+ */
+
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int len, dec, base;
 	int i;
+
+	if (b == NULL)
+		return (0);
+
 	dec = 0;
 
 	for (len = 0; b[len]; len++)

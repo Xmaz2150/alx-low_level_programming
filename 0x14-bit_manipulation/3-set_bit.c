@@ -10,7 +10,7 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int size_int, i, j, i_match;
-	char byte, bit;
+	char byte;
 	char *bytes;
 
 	size_int = sizeof(unsigned int);
@@ -22,10 +22,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 		byte = bytes[i];
 		for (j = 0; j < 8; j++)
 		{
-			bit = byte & 1;
 			if (i_match == index)
 			{
-				bit = 1;
 				bytes[i] |= (1 << j);
 				return (1);
 			}

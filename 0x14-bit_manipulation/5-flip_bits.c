@@ -1,5 +1,11 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * count_set_bit - counts 1's in:
+ * @n: Input, number
+ * 
+ * Return: (int) 1's
+ */
 
 int count_set_bits(int n)
 {
@@ -24,5 +30,5 @@ int count_set_bits(int n)
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	return (countSetBits(n ^ m));
+	return (count_set_bits(n ^ m));
 }

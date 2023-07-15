@@ -11,23 +11,24 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *my_file;
-	int i, lett;
-	int c;	
+	char *buf;
+	size_t n, i;
+
+	buf = malloc(letters);
+
+	if (buf == NULL)
+		return (0);
 
 	my_file = fopen(filename, "r");
 	if (my_file == NULL)
 		return (0);
-	i = 0;
-	lett = letters;
-	(void)lett;
 
-	while ((c = fgetc(my_file)) != EOF)
-	{
-		putchar(c);
-		i++;
-	}
+	n = fread(buf, sizeof(char), letters,  my_file);
+
+	for (i = 0; i <= n; i++)
+		putchar(buf[i]);
 
 	fclose(my_file);
 
-	return (i);
+	return (n);
 }

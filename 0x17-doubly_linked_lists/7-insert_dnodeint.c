@@ -32,8 +32,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 		/* backwards */
 
-		/* */
-		rev_print(*h);
 		return (new_node);
 	}
 }

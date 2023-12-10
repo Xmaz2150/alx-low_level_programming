@@ -1,11 +1,24 @@
 #include "lists.h"
 
+/**
+ * insert_dnodeint_at_index- inserts new node at any given index
+ * @h: Input, address of list
+ * @idx: Input, positon in list to insert new node
+ * @n: Input, new node data
+ *
+ * Return: new node
+ */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_node, *current_node;
+	dlistint_t *new_node, *current_node, *tmp;
 	unsigned int i;
 
+	(void)tmp;
+	/*
+	*/
 	if (*h == NULL)
+		return (add_dnodeint(h, n));
+	else if (idx == 0)
 		return (add_dnodeint(h, n));
 	else if (idx >= dlistint_len(*h))
 		return (add_dnodeint_end(h, n));
@@ -44,7 +57,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 size_t dlistint_len(const dlistint_t *h)
 {
-	int nodes = 0;
+	size_t nodes = 0;
 
 	if (h == NULL)
 		return (0);

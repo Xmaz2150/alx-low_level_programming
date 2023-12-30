@@ -1,6 +1,7 @@
 #include "hash_tables.h"
 
 unsigned int valid_key_count(const hash_table_t *ht);
+unsigned int print_collisions(hash_node_t *head);
 
 /**
  * hash_table_print - prints:
@@ -15,7 +16,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht == NULL)
 		return;
 	num_keys = valid_key_count(ht);
-	ht_size = ht->size - 1;
+	ht_size = ht->size;
 	printf("{");
 	for (j = 0; j < ht_size; j++)
 	{
@@ -24,10 +25,15 @@ void hash_table_print(const hash_table_t *ht)
 			if (num_keys > 1)
 			{
 				printf("'%s': '%s', ", ht->array[j]->key, ht->array[j]->value);
+				if (print_collisions(ht->array[j]->next) > 0)
+					printf(", ");
 				num_keys--;
 			}
 			else
+			{
 				printf("'%s': '%s'", ht->array[j]->key, ht->array[j]->value);
+				print_collisions(ht->array[j]->next);
+			}
 		}
 		else
 			continue;
@@ -53,4 +59,21 @@ unsigned int valid_key_count(const hash_table_t *ht)
 			continue;
 	}
 	return (num_keys);
+}
+
+unsigned int print_collisions(hash_node_t *head)
+{
+	unsigned int printed;
+
+	printed = 0;
+	while (head != NULL)
+	{
+		if (head->next != NULL)
+		printf("'%s': '%s', ", head->key, head->value);
+		else
+			printf("'%s': '%s'", head->key, head->value);
+		printed++;
+		head = head->next;
+	}
+	return (printed);
 }

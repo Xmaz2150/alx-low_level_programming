@@ -1,11 +1,10 @@
-.PHONY: school
-
 CC = gcc
-SRC = main.c school.c
-OBJ = main.o school.o
-NAME = school2-Makefile
+SRC = school.c main.c
+OBJ = $(SRC:%.c=%.o)
+NAME = school
 
-school: $(SRC)
-	$(CC) $(SRC) -o school
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
 
-all: school
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)

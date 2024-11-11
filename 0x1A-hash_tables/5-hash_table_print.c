@@ -61,6 +61,12 @@ unsigned int valid_key_count(const hash_table_t *ht)
 	return (num_keys);
 }
 
+/**
+ * print_collisions - prints collision list
+ * @head: Input, start of list
+ *
+ * Return: printed items count
+ */
 unsigned int print_collisions(hash_node_t *head)
 {
 	unsigned int printed;

@@ -14,18 +14,23 @@ void hash_table_delete(hash_table_t *ht)
 		return;
 	for (i = 0; i < ht->size; i++)
 	{
-		if (ht->array[i] == NULL)
-			free(ht->array[i]);
+		hash_node_t *bucket = ht->array[i];
+
+		if (bucket == NULL)
+			free(bucket);
 		else
 		{
-			if (ht->array[i]->next != NULL)
+			while (bucket != NULL)
 			{
-				free(ht->array[i]->next->key);
-				free(ht->array[i]->next->value);
+				hash_node_t *temp = bucket;
+
+				free(temp->key);
+				free(temp->value);
+				free(temp);
+
+				bucket = bucket->next;
 			}
-			free(ht->array[i]->key);
-			free(ht->array[i]->value);
-			free(ht->array[i]);
+			free(bucket);
 		}
 	}
 	free(ht);

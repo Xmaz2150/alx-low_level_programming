@@ -26,12 +26,12 @@ void hash_table_delete(hash_table_t *ht)
 
 				free(temp->key);
 				free(temp->value);
-				free(temp);
 
 				bucket = bucket->next;
+				free(temp);
 			}
-			free(bucket);
 		}
 	}
+	free(ht->array);
 	free(ht);
 }
